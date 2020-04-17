@@ -1,5 +1,5 @@
 /**
- * Interface for a drawable object.
+ * Interface for a drawable object. Honor code.
  * @author Yavuz Yavuzer
  * @version 04/14/2020
  *

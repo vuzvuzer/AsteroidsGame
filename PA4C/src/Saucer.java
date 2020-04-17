@@ -1,8 +1,10 @@
+import java.awt.Color;
+
 /**
- * Saucer object for Asteroids game.
+ * Saucer object for Asteroids game. Honor code.
  * 
  * @author Yavuz Yavuzer
- * @version 04/14/2020
+ * @version 04/17/2020
  *
  */
 public class Saucer extends Projectile
@@ -43,11 +45,11 @@ public class Saucer extends Projectile
   @Override
   public void update()
   {
-      if (GameConstants.GENERATOR.nextDouble() < GameConstants.SAUCER_DIRECTION_PROB)
-      {
-        this.velocity.setHeading(GameConstants.GENERATOR.nextDouble() * 2 * Math.PI);
-      }
-      this.location.move(this.velocity);
+    if (GameConstants.GENERATOR.nextDouble() < GameConstants.SAUCER_DIRECTION_PROB)
+    {
+      this.velocity.setHeading(GameConstants.GENERATOR.nextDouble() * 2 * Math.PI);
+    }
+    this.location.move(this.velocity);
   }
 
   /**
@@ -56,6 +58,8 @@ public class Saucer extends Projectile
   @Override
   public void draw()
   {
+    StdDraw.setPenColor(Color.WHITE);
+    StdDraw.setPenRadius();
     StdDraw.rectangle(this.location.getX(), this.location.getY(), GameConstants.SAUCER_WIDTH / 2,
         GameConstants.SAUCER_HEIGHT / 2);
 

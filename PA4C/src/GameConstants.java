@@ -2,11 +2,12 @@ import java.awt.Color;
 import java.util.Random;
 
 /**
- * This class stores constants related to the Asteroids application.
+ * This class stores constants related to the Asteroids application. Honor code.
  * 
  * @author Nathan Sprague
  * @author Fox
- * @version V1.1, 3/19
+ * @author Yavuz Yavuzer
+ * @version V1.2, 04/17/2020
  */
 public class GameConstants
 {
@@ -52,5 +53,11 @@ public class GameConstants
   public static final int NUMBER_OF_LIVES = 3;
   
   public static final Random GENERATOR = new Random();
+  
+  // Added values to represent the minimum collision distance for several scenarios.
+  public static final double SHIP_ASTEROID_COLLISION = SHIP_HEIGHT / 2 + ASTEROID_RADIUS;
+  public static final double SHIP_SAUCER_COLLISION = SHIP_HEIGHT / 2 + SAUCER_WIDTH / 2;
+  public static final double BULLET_ASTEROID_COLLISION = BULLET_RADIUS + ASTEROID_RADIUS;
+  public static final double BULLET_SAUCER_COLLISION = BULLET_RADIUS + SAUCER_WIDTH / 2;
 
 }

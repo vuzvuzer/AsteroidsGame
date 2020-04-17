@@ -30,7 +30,7 @@ public abstract class Projectile implements Collidable, Updateable, Drawable
    */
   public Projectile(double s)
   {
-
+    velocity.setMagnitude(s);
   }
   
   /**
@@ -47,7 +47,7 @@ public abstract class Projectile implements Collidable, Updateable, Drawable
    */
   public void setDefunct()
   {
-    
+    isDefunct = true;
   }
 
   /**
@@ -64,7 +64,7 @@ public abstract class Projectile implements Collidable, Updateable, Drawable
    */
   public int getPoints()
   {
-    return -1;
+    return 0;
   }
 
 }

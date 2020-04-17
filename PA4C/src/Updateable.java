@@ -1,5 +1,6 @@
 /**
- * Interface for an updateable object.
+ * Interface for an updateable object. Honor code.
+ * 
  * @author Yavuz Yavuzer
  * @version 04/14/2020
  *

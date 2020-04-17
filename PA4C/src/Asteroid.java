@@ -8,18 +8,22 @@
 public class Asteroid extends Projectile
 {
   /**
-   * Make a new asteroid with a random location and direction (handled
-   * by the super-class), and a fixed size and speed.
+   * Make a new asteroid with a random location and direction (handled by the super-class), and a
+   * fixed size and speed.
    */
   public Asteroid()
   {
-    super(GameConstants.ASTEROID_SPEED);
+    super(
+        new Point(GameConstants.GENERATOR.nextDouble() * GameConstants.SCREEN_WIDTH,
+            GameConstants.GENERATOR.nextDouble() * GameConstants.SCREEN_HEIGHT),
+        new Vector2D(GameConstants.GENERATOR.nextDouble() * (Math.PI * 2),
+            GameConstants.ASTEROID_SPEED));
   }
 
   @Override
   public void update()
   {
-    location.moveAndWrap(velocity, GameConstants.SCREEN_WIDTH-1, GameConstants.SCREEN_HEIGHT-1);
+    location.moveAndWrap(velocity, GameConstants.SCREEN_WIDTH - 1, GameConstants.SCREEN_HEIGHT - 1);
   }
 
   @Override
@@ -27,7 +31,7 @@ public class Asteroid extends Projectile
   {
     StdDraw.circle(location.getX(), location.getY(), GameConstants.ASTEROID_RADIUS);
   }
-  
+
   @Override
   public int getPoints()
   {
@@ -39,5 +43,5 @@ public class Asteroid extends Projectile
   {
     return GameConstants.ASTEROID_RADIUS;
   }
-  
+
 }
